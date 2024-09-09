@@ -28,7 +28,7 @@ export default function Home() {
       titleRef.current.innerHTML = ''
     }
     const vara = new Vara("#titleContainer", "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Shadows-Into-Light/shadows-into-light.json",
-      [{ text: "SF Bucket List" }], { fontSize: 36, strokeWidth: 2, textAlign: "center" })
+      [{ text: "SF Bucket List" }], { fontSize: 30, strokeWidth: 2, textAlign: "center" })
     vara.animationEnd(() => {
       setFinishedAnimating(true)
     })
@@ -45,8 +45,8 @@ export default function Home() {
   return (
     <Flex width="100dvw" height="100dvh" backgroundRepeat={"repeat"} backgroundImage="https://img.freepik.com/free-photo/paperboard-texture_95678-72.jpg" p={8}>
       <VStack alignItems={"center"} width="100%">
-        <Box id="titleContainer" width="100%" height="15%" ref={titleRef}></Box>
-        <Box width="100%" overflowY="scroll" height="85%">
+        <Box id="titleContainer" width="100%" height={{ base: '20%', xs: '10%' }} ref={titleRef}></Box>
+        <Box width="100%" overflowY="scroll" height={{ base: '80%', xs: '90%' }}>
           <Collapse in={finishedAnimating && !fetching}>
 
             <VStack alignItems={"left"} >
