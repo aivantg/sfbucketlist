@@ -29,6 +29,9 @@ const fetchAllBlocks = async (notion: Client, pageId: string): Promise<Array<Blo
 export async function GET() {
     const notion = new Client({ auth: process.env.NOTION_SECRET })
     const pageId = process.env.NOTION_PAGE_ID;
+    if (!pageId) {
+        throw new Error("Page ID not set")
+    }
     const blocks = await fetchAllBlocks(notion, pageId)
     const cleanedBlocks = blocks.map((block): CleanBlock | null => {
         if (!('type' in block)) {
