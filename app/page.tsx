@@ -50,7 +50,7 @@ export default function Home() {
           <Collapse in={finishedAnimating && !fetching}>
 
             <VStack alignItems={"left"} >
-              {fetching ? <Box>Loading...</Box> : todos.map((todo, index) => {
+              {fetching ? <Box>Loading..</Box> : todos.map((todo, index) => {
                 return todo.type === 'todo' ? <TodoItem key={index} block={todo} /> : <HeadingItem key={index} block={todo} />
               })}
             </VStack>
