@@ -1,9 +1,8 @@
 "use client"
 
-import { Box, Flex, IconButton, useDisclosure, VStack } from "@chakra-ui/react"
+import { Box, Flex, useDisclosure, VStack } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Head from "next/head"
-import { AddIcon } from "@chakra-ui/icons"
 import { BucketList } from "../types/bucketList"
 import { BucketListDisplay } from "../components/BucketListDisplay"
 import { VaraTitle } from "../components/VaraTitle"

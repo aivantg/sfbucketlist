@@ -9,19 +9,15 @@ import { VaraTitle } from "../../components/VaraTitle"
 
 export default function ListsPage() {
     const [lists, setLists] = useState<BucketList[]>([])
-    const [fetching, setFetching] = useState(true)
-    const [finishedAnimating, setFinishedAnimating] = useState(false)
 
     useEffect(() => {
         fetch('/api/lists')
             .then(async (response) => {
                 const data = await response.json()
                 setLists(data)
-                setFetching(false)
             })
             .catch(error => {
                 console.error('Error fetching lists:', error)
-                setFetching(false)
             })
     }, [])
 
@@ -35,7 +31,7 @@ export default function ListsPage() {
                 <VStack alignItems="center" width="100%" spacing={8}>
                     <VaraTitle
                         text="All Bucket Lists"
-                        onAnimationEnd={() => setFinishedAnimating(true)}
+                        onAnimationEnd={() => { }}
                     />
                     <Box width="100%" maxW="800px" overflowY="auto">
                         <VStack spacing={4} align="stretch">
