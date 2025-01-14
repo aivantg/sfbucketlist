@@ -15,14 +15,14 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@fontsource-variable/playpen-sans": "^5.0.9",
-    "@notionhq/client": "^2.2.15",
     "@prisma/client": "^6.2.1",
     "framer-motion": "^11.5.4",
-    "next": "14.2.8",
+    "next": "^14.2.23",
     "prisma": "^6.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "vara": "^1.4.1"
+    "vara": "^1.4.1",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",
