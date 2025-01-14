@@ -1,5 +1,4 @@
-'use client'
-
+import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import '@fontsource-variable/playpen-sans'
 
@@ -13,13 +12,16 @@ const theme = extendTheme({
             baseStyle: {
                 control: {
                     bg: "white",
-
                 }
             }
         }
     }
 });
 
-export function Providers({ children }: { children: React.ReactNode }) {
-    return <ChakraProvider theme={theme}>{children}</ChakraProvider>
-}
+export default function App({ Component, pageProps }: AppProps) {
+    return (
+        <ChakraProvider theme={theme}>
+            <Component {...pageProps} />
+        </ChakraProvider>
+    )
+} 
