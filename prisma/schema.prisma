@@ -34,4 +34,6 @@ model BucketList {
   title     String
   key       String   @unique
   items     BucketListItem[]
+  passcode  String
+  isPublic  Boolean  @default(false)
 }

@@ -7,6 +7,7 @@ import { useRouter } from "next/router"
 import { BucketList } from "../types/bucketList"
 import { BucketListDisplay } from "../components/BucketListDisplay"
 import { VaraTitle } from "../components/VaraTitle"
+import { Header } from "../components/Header"
 
 export default function BucketListPage() {
     const router = useRouter()
@@ -59,6 +60,7 @@ export default function BucketListPage() {
             <Flex width="100dvw" height="100dvh" backgroundRepeat="repeat" backgroundImage="https://img.freepik.com/free-photo/paperboard-texture_95678-72.jpg" p={8}>
                 {bucketList && (
                     <VStack alignItems="center" width="100%">
+                        <Header />
                         <VaraTitle
                             text={bucketList.title}
                             onAnimationEnd={() => setFinishedAnimating(true)}

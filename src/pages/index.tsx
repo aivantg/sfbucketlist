@@ -8,6 +8,7 @@ import { BucketList } from "../types/bucketList"
 import { BucketListDisplay } from "../components/BucketListDisplay"
 import { VaraTitle } from "../components/VaraTitle"
 import { CreateListModal } from "../components/CreateListModal"
+import { Header } from "../components/Header"
 
 export default function Home() {
     const [bucketList, setBucketList] = useState<BucketList | null>(null)
@@ -52,17 +53,7 @@ export default function Home() {
             </Head>
             <Flex width="100dvw" height="100dvh" backgroundRepeat="repeat" backgroundImage="https://img.freepik.com/free-photo/paperboard-texture_95678-72.jpg" p={8}>
                 <VStack alignItems="center" width="100%">
-                    <Flex width="100%" justifyContent="flex-end" position="absolute" top={4} right={4}>
-                        <IconButton
-                            aria-label="Create new list"
-                            icon={<AddIcon />}
-                            onClick={onOpen}
-                            colorScheme="blue"
-                            variant="solid"
-                            size="lg"
-                            isRound
-                        />
-                    </Flex>
+                    <Header showCreateButton onCreateClick={onOpen} />
                     <VaraTitle text="SF Bucket List" onAnimationEnd={() => setFinishedAnimating(true)} />
                     <Box width="100%" overflowY="scroll" height={{ base: '80%', xs: '90%' }}>
                         <BucketListDisplay
