@@ -7,7 +7,7 @@ import { AddIcon } from "@chakra-ui/icons"
 import { BucketList } from "../types/bucketList"
 import { BucketListDisplay } from "../components/BucketListDisplay"
 import { VaraTitle } from "../components/VaraTitle"
-import { CreateListModal } from "../components/CreateListmodal"
+import { CreateListModal } from "../components/CreateListModal"
 
 export default function Home() {
     const [bucketList, setBucketList] = useState<BucketList | null>(null)
